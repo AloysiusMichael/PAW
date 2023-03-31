@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Function</title>
+    <script type="text/javascript">
+      function tampilpesan() {
+        return "Universitas MDP";
+      }
+      function kali(bil1, bil2) {
+        return bil1 * bil2;
+      }
+      function pesan1() {
+        alert("Pesan Hello World");
+      }
+      function pesan2(nama) {
+        alert("Selamat Datang " + nama);
+      }
+      function pesan3() {
+        var nilai = prompt("SIlahkan Masukkan Nilai !");
+      }
+      function pesan4() {
+        var text;
+        if (confirm("Press a button!\nEither OK or Cancel.") == true) {
+          text = "You pressed OK!";
+        } else {
+          text = "You canceled!";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </head>
+  <body onload="pesan1()">
+    <script type="text/javascript">
+      document.write(tampilpesan() + "<br>");
+      document.write(kali(2, 5) + "<br>");
+    </script>
+    <p id="demo"></p>
+    <form>
+      <input type="button" value="Panggil Pesan 1" onclick="pesan1()" />
+
+      <input
+        type="button"
+        value="Panggil Pesan 2"
+        onclick="pesan2('Aloysius')"
+      />
+      <input type="button" value="Panggil Pesan 3" onclick="pesan3()" />
+
+      <input type="button" value="Panggil Pesan 4" onclick="pesan4()" />
+    </form>
+
+    <p id="Kalimat">Pengembangan Aplikasi Web !</p>
+    <button
+      onclick="document.getElementById('Kalimat').innerHTML='Hallo Javascript'"
+    >
+      Ubah Html
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.fontSize='40px'">
+      Ubah Font Size
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.display='none'">
+      Hide
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.display='block'">
+      Visible
+    </button>
+  </body>
+</html>

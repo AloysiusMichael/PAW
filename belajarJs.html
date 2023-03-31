@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JavaScript</title>
+    <script type="text/JavaScript">
+        document.write ("<h1>Hello World</h1>");
+        document.write ("<h2 style = 'color : grey';> Javascript</h2>")
+
+        var a = "Universitas MDP";
+        var b = 20;
+        var c = true;
+        document.write("A = " + a + "<br>");
+        document.write("B = " + b + "<br>");
+        document.write("C = " + c + "<br>");
+
+        console.log ("Nilai A = "+ typeof a);
+        console.log ("Nilai B = "+ typeof b);
+        console.log ("Nilai C = "+ typeof c);
+
+        //Operator Aritmatika
+
+
+        var i = 10;
+        var j = 50;
+        document.write("<h2>Operator Aritmatika</h2>")
+      //   document.write("<br>")
+        document.write("<h3>Penjumlahan</h3>")
+        document.write("i+j = "+(i+j)+"<br>");
+        document.write("<h3>Pengurangan</h3>");
+        document.write("j-i = "+(j-i)+"<br>");
+        document.write("<h3>Modulus</h3>");
+        document.write("i%j = "+(i%j)+"<br>");
+        document.write("<h3>Pangkat<h3>")
+      //   document.write("<br>")
+        document.write("i = "+(i** 2)+"<br>");
+
+        //IF
+        document.write("<h2>IF</h2>")
+        if(i<j){
+          document.write("i Lebih Kecil dari J");
+        }else{
+          document.write("J lebih Besar dari I");
+        }
+        document.write("<br>")
+
+        document.write("<h2>Array</h2>")
+        var color = ["blue","red","yellow"];
+        var txt =" ";
+        for( x in color){
+            txt += color [x];
+          //   x++;
+            console.log(txt );
+        }
+        for (var k = 0;k<=color.length;k++){
+          document.write("<br><h1 style ='color:"color[k]+"'>"+color[i])
+        }
+      //   document.write(color[0]+" "+ color[2]);
+      //   document.write("<br>")
+
+        document.write("<h2>Perulangan For</h2>")
+        document.write("DI Console Lihat nya")
+        for(var i=0;i<=10;i++){
+            console.log("NIlai i = "+i);
+        }
+        document.write("<br>")
+
+      //   document.write("<h2>Perulangan While</h2>")
+      //   while (i <= 10) {
+      //       text += "The number is " + i;
+      //       i++;
+      //       console.log("NIlai i = "+ text);
+      //       document.write("<br>")
+    </script>
+  </head>
+  <body>
+    <h1>Belajar JavaScript Dasar</h1>
+  </body>
+</html>
