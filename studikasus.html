@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studi Kasus Html</title>
+  </head>
+  <body>
+    Nama : <input type="text" id="nama" /><br />
+    Biaya Jasa : <input type="text" id="biayajs" /><br />
+    Biaya Sparepart : <input type="text" id="biayasp" /><br />
+    Kodemember : <input type="text" id="member" /><br />
+
+    <button id="hitung" onclick="hitungpajak()">Hitung Data</button><br />
+    <button id="hitung Sub Total Penjualan" onclick="total()">
+      Hitung Sub Total Penjualan</button
+    ><br />
+
+    <p id="tampil">Output</p>
+    <p id="tampilPenjualan">Sub Total :</p>
+    <p id="tampildiskon">Diskon :</p>
+    <p id="tampildpp">Dpp :</p>
+    <p id="tampilppn">PPN :</p>
+    <p id="tampilgrandtotal">Grandtotal :</p>
+
+    <script type="text/javascript">
+      //   function diskon() {}
+
+      function total() {
+        var jasa = document.getElementById("biayajs").value;
+        var sparepart = document.getElementById("biayasp").value;
+        var member = document.getElementById("member").value;
+        var penjualan = parseInt(jasa) + parseInt(sparepart);
+        var diskon = 0;
+        var nilai = 0;
+        if (document.getElementById("member") == "B") {
+          diskon = 0.25;
+          nilai = diskon * penjualan;
+        } else if (document.getElementById("member") == "M") {
+          diskon = 0.2;
+          nilai = diskon * penjualan;
+        } else {
+          diskon = 0.1;
+          nilai = diskon * penjualan;
+        }
+
+        var dpp = penjualan - nilai;
+        var ppn = 0.1 * dpp;
+        var grandtotal = dpp + ppn;
+
+        document.getElementById("tampilPenjualan").innerHTML = penjualan;
+        document.getElementById("tampildiskon").innerHTML = nilai;
+        document.getElementById("tampildpp").innerHTML = dpp;
+        document.getElementById("tampilppn").innerHTML = ppn;
+        document.getElementById("tampilgrandtotal").innerHTML = grandtotal;
+      }
+      function hitungpajak() {
+        var pelanggan = document.getElementById("nama").value;
+        document.getElementById("tampil").innerHTML = pelanggan;
+      }
+    </script>
+  </body>
+</html>
